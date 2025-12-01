@@ -4,15 +4,9 @@ class Solution {
     long answer;
     
     public long solution(int n, int[] times) {
-       List<Integer> timeList = new ArrayList<>();
-        
-       for(int i= 0; i<times.length; i++){
-           timeList.add(times[i]);
-       }
-        timeList.sort(Collections.reverseOrder());
-        
+        Arrays.sort(times);
         long minTime = 1;
-        long maxTime = (long) timeList.get(0) * n;
+        long maxTime = (long) times[times.length - 1] * n;
         
         answer = maxTime;
         
