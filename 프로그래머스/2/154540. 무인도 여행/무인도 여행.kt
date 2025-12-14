@@ -52,8 +52,6 @@ class Solution {
         
         visited[x][y] = true
         
-        println("$x, $y 방문")
-        
         var sum = maps[x][y]
         
         for(i in 0..3){
