@@ -1,10 +1,10 @@
 # [level 2] 모음 사전 - 84512 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/84512) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/84512?language=kotlin) 
 
 ### 성능 요약
 
-메모리: 87.7 MB, 시간: 31.84 ms
+메모리: 63.6 MB, 시간: 15.82 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 07월 07일 02:17:42
+2026년 05월 17일 14:28:00
 
 ### 문제 설명
 
