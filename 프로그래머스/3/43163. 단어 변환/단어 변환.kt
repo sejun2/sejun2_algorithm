@@ -1,28 +1,28 @@
 class Solution {
-    var count = 0
-    var find = false
+    var answer = 0
     
     fun solution(begin: String, target: String, words: Array<String>): Int {
     	bfs(begin, target, words, mutableListOf<String>()) 
         
-        return if(find) count else 0
+        return answer
     }
     
     fun bfs(begin: String, target: String, words: Array<String>, visited: MutableList<String>){
-        val queue = ArrayDeque<String>()
+        val queue = ArrayDeque<Pair<String, Int>>()
+    	var count = 0
         
-        queue.addFirst(begin)
+        queue.addFirst(begin to 0)
         
         // 처음 변환 가능한 단어 큐에 넣기
         
         while(queue.isNotEmpty()){
             // 큐에서 하나씩 빼면서 변환하고
             
-            val s = queue.removeFirst()
+            val (s, i) = queue.removeFirst()
            
             // 찾던 단어면 break
             if (s == target){
-                find = true
+                answer = i
                 return
             }
             
@@ -34,11 +34,8 @@ class Solution {
                 visited.add(w)
                 println("visited: $w")
                 
-                queue.addFirst(w)
+                queue.addLast(w to i+1)
             }
-            
-            // 카운트 증가
-            count++
         }
     }
     
